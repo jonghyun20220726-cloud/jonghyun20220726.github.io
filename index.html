@@ -1,7 +1,28 @@
 <html>
 
 <body>
-    <script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "firebase/app";
+        import { getAnalytics } from "firebase/analytics";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyD7epGl6vmvtlTLjVuJwOYqtrSb9BIjqrU",
+            authDomain: "number-game-350e1.firebaseapp.com",
+            projectId: "number-game-350e1",
+            storageBucket: "number-game-350e1.firebasestorage.app",
+            messagingSenderId: "63006344923",
+            appId: "1:63006344923:web:f4ca77553c6c82b7066efe",
+            measurementId: "G-N38EDJC8SS"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
         let 입력 = prompt("숫자를 고르세요, 1~10");
         let 계좌 = prompt("계좌번호를 입력해주세요");
         let randomNumber = Math.floor(Math.random() * 10) + 1;
