@@ -54,11 +54,11 @@
             }
         }
         if (입력 == 숫자)
-            await addDoc(collection(db, "gmaes"), {
+            addDoc(collection(db, "gmaes"), {
                 result: "승리"
             });
         else
-            await addDoc(collection(db, "games"), {
+            addDoc(collection(db, "games"), {
                 result: "패배"
             });
     </script>
