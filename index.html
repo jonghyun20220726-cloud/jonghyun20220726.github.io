@@ -37,10 +37,8 @@
         console.log(randomNumber);
         let 돈 = prompt("돈을 걸으세요 (1000~10000)");
 
+
         if (입력 == 숫자) {
-            await addDoc(collection(db, "gmaes"), {
-                result: "승리"
-            });
             alert("승리");
             alert("당신의 돈:" + (Number(돈) * Number(숫자)));
             let 현재돈 = Number(돈) * Number(숫자);
@@ -49,9 +47,6 @@
                 location.reload();
             }
         } else {
-            await addDoc(collection(db, "games"), {
-                result: "패배"
-            });
             alert("패배");
             alert("당신의 돈: " + (Number(돈) - Number(돈)));
             let 다시 = prompt("다시 하시겠습니까?");
@@ -59,6 +54,14 @@
                 location.reload();
             }
         }
+        if (입력 == 숫자)
+            await addDoc(collection(db, "gmaes"), {
+                result: "승리"
+            });
+        else
+            await addDoc(collection(db, "games"), {
+                result: "패배"
+            });
     </script>
 </body>
 
