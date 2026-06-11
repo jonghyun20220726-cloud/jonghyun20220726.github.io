@@ -2,32 +2,7 @@
 
 
 <body>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-analytics.js";
-        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
-
-
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyD7epGl6vmvtlTLjVuJwOYqtrSb9BIjqrU",
-            authDomain: "number-game-350e1.firebaseapp.com",
-            projectId: "number-game-350e1",
-            storageBucket: "number-game-350e1.firebasestorage.app",
-            messagingSenderId: "63006344923",
-            appId: "1:63006344923:web:a7712c26f82f7291066efe",
-            measurementId: "G-EPW25SGTQJ"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const db = getFirestore(app);
+    <script>
 
         let 입력 = prompt("숫자를 고르세요, 1~5");
         let randomNumber = Math.floor(Math.random() * 5) + 1;
@@ -36,20 +11,26 @@
         console.log(randomNumber);
         let 돈 = prompt("돈을 걸으세요 (1000~10000)");
 
-
         if (입력 == 숫자) {
             alert("승리");
             alert("당신의 돈:" + (Number(돈) * Number(숫자)));
             let 현재돈 = Number(돈) * Number(숫자);
             let 다시 = prompt("다시 하시겠습니까?");
-        }
-        else {
+            if (다시 == "네") {
+                Location.reload();
+            }
+        } else {
             alert("패배");
-            alert("돈이 사라집니다");
+            alert("당신의 돈: " + (Number(돈) - Number(돈)));
+            let 다시 = prompt("다시 하시겠습니까?");
+            if (다시 == "네") {
+                location.reload();
+            }
         }
-        if (다시 == "네") {
-            location.reload();
-        }
+
+
+
+
     </script>
 </body>
 
