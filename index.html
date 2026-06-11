@@ -29,8 +29,8 @@
         const analytics = getAnalytics(app);
         const db = getFirestore(app);
 
-        let 입력 = prompt("숫자를 고르세요, 1~10");
-        let randomNumber = Math.floor(Math.random() * 10) + 1;
+        let 입력 = prompt("숫자를 고르세요, 1~5");
+        let randomNumber = Math.floor(Math.random() * 5) + 1;
         let 숫자 = randomNumber;
 
         console.log(randomNumber);
@@ -39,25 +39,16 @@
 
         if (입력 == 숫자) {
             alert("승리");
-            await addDoc(collection(db, "games"), {
-                result: "승리"
-            });
             alert("당신의 돈:" + (Number(돈) * Number(숫자)));
             let 현재돈 = Number(돈) * Number(숫자);
             let 다시 = prompt("다시 하시겠습니까?");
-            if (다시 == "네") {
-                location.reload();
-            }
-        } else {
+        }
+        else {
             alert("패배");
-            await addDoc(collection(db, "games"), {
-                result: "패배"
-            });
-            alert("당신의 돈: " + (Number(돈) - Number(돈)));
-            let 다시 = prompt("다시 하시겠습니까?");
-            if (다시 == "네") {
-                location.reload();
-            }
+            alert("돈이 사라집니다");
+        }
+        if (다시 == "네") {
+            location.reload();
         }
     </script>
 </body>
