@@ -2,9 +2,10 @@
 
 
 <body>
-    <h2>"딴 돈은 1주일정도 입금시간이 걸립니다"</h2>
+    <h2 id="html">딴돈은 입금하는데 최대 1주일 정도 걸립니다</h2>
+    <h2 id="증거">캡쳐를 해두거나 사이트 창을 남겨둬야 돈을 입금해드릴수 있습니다</h2>
     <script>
-
+        document.getElementById("html").style.color = "blue";
         let 입력 = prompt("숫자를 고르세요, 1~5");
         let randomNumber = Math.floor(Math.random() * 5) + 1;
         let 숫자 = randomNumber;
