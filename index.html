@@ -1,38 +1,92 @@
-<html>
+<!DOCTYPE html>
 
+<head>
+    <title>대상혁 숭배사이트</title>
+</head>
+<style>
+    #제목 {
+        margin-left: 730px;
+        margin-top: 1px;
+        font-size: 50px;
+        color: rgb(4, 5, 8);
+        position: absolute;
+    }
+
+
+
+
+
+
+    .대상혁 {
+        width: 500px;
+        height: auto;
+        object-fit: cover;
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+
+    .대상혁1 {
+        width: 500px;
+        height: auto;
+        object-fit: cover;
+        margin-top: 100px;
+        margin-left: 130px;
+
+    }
+
+    .대상혁2 {
+        width: 500px;
+        height: auto;
+        object-fit: cover;
+        margin-top: 100px;
+        margin-left: 150px;
+    }
+
+    #기운 {
+        margin-left: 840px;
+    }
+
+    .마크 {
+        width: 150px;
+        height: auto;
+        margin-top: 1px;
+        margin-left: -670px;
+        position: absolute;
+    }
+
+    #노래 {
+        margin-left: 850px;
+    }
+
+    .레네다 {
+        width: 600px;
+        height: outo;
+    }
+</style>
 
 <body>
-    <h2 id="html">딴돈은 입금하는데 최대 1주일 정도 걸립니다</h2>
-    <h2 id="증거">캡쳐를 해두거나 사이트 창을 남겨둬야 돈을 입금해드릴수 있습니다</h2>
+    <h1 id="제목">
+        오늘도 대상혁 숭배하자
+        <img src="t1.jpg" alt="사진 불러오는중" class="마크">
+    </h1>
+    </p>
+    <div class="대상혁사진박스">
+        <img src="faker.jpg" alt="사진 불러오는중" class="대상혁">
+
+        <img src="대상혁2.jpg" alt="사진 불러오는중" class="대상혁1">
+
+
+
+        <img src="대상혁4.jpg" alt="사진 불러오는중" class="대상혁2">
+    </div>
+    <p id="기운">기운 받으세요</p>
+    <hr>
+    <h1 id="노래">월즈 노래</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hTwBjqnXv2o" title="YouTube video player"
+        frameborder="0" allowfullscreen>
+    </iframe>
     <script>
-        document.getElementById("html").style.color = "blue";
-        let 입력 = prompt("숫자를 고르세요, 1~5");
-        let randomNumber = Math.floor(Math.random() * 5) + 1;
-        let 숫자 = randomNumber;
-        let 돈 = prompt("돈을 걸으세요 (1000~10000)");
-        alert("입금하면 되는 계좌번호:1908-1220-2618");
-
-
-        if (입력 == 숫자) {
-            alert("승리");
-            alert("당신의 돈:" + (Number(돈) * Number(숫자)));
-            let 현재돈 = Number(돈) * Number(숫자);
-            let 다시 = prompt("다시 하시겠습니까?");
-            if (다시 == "네") {
-                Location.reload();
-            }
-        } else {
-            alert("패배");
-            alert("당신의 돈: " + (Number(돈) - Number(돈)));
-            let 다시 = prompt("다시 하시겠습니까?");
-            if (다시 == "네") {
-                location.reload();
-            }
-        }
-
-
-
-
+        document.getElementById("기운").style.fontSize = "30px";
     </script>
 </body>
 
