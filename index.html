@@ -48,13 +48,42 @@
         position: absolute;
     }
 
-    #노래 {
-        margin-left: 850px;
+    #레네다 {
+        width: 600px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+
     }
 
-    .레네다 {
+    #gods은신이노 {
         width: 600px;
-        height: outo;
+        height: auto;
+        text-align: center;
+        margin-top: 50px;
+        aspect-ratio: 16 / 9;
+    }
+
+    #havy {
+        width: 600px;
+        height: auto;
+        text-align: center;
+        margin-top: 50px;
+        aspect-ratio: 16 / 9;
+    }
+
+
+
+    #노래 {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #노래노 {
+        color: rgb(207, 207, 122);
+    }
+
+    #노래노 {
+        display: none;
     }
 </style>
 
@@ -65,11 +94,38 @@
             class="대상혁1"> <img src="대상혁4.jpg" alt="사진 불러오는중" class="대상혁2"> </div>
     <p id="기운">기운 받으세요</p>
     <hr>
-    <h1 id="노래">월즈 노래</h1> <iframe width="560" height="315" src="https://www.youtube.com/embed/hTwBjqnXv2o"
-        title="YouTube video player" frameborder="0" allowfullscreen>
+    <h1 id="노래" onclick="노래보이기()">대상혁헌정노래</h1>
+    <div id="노래노">
 
-    </iframe>
-    <script> document.getElementById("기운").style.fontSize = "30px"; </script>
+        <iframe width="560" id="레네다" height="315" src="https://www.youtube.com/embed/hTwBjqnXv2o"
+            title="YouTube video player" frameborder="0" allowfullscreen>
+
+
+        </iframe>
+
+        <iframe id="gods은신이노" width="560" height="315"
+            src="https://www.youtube.com/embed/xJqDdgHPj_k?si=o-s2w5bIQNO2dBqH" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+
+        <iframe id="havy" width="560" height="315" src="https://www.youtube.com/embed/jzOMcKA3e90?si=n1h15iW-qAfcMFCs"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+
+
+
+
+
+    <script> document.getElementById("기운").style.fontSize = "30px";
+        function 노래보이기() {
+            document.getElementById("노래노").style.display = "block";
+        }
+    </script>
 
 </body>
 
