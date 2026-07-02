@@ -61,6 +61,7 @@
         text-align: center;
         margin-top: 50px;
         aspect-ratio: 16 / 9;
+
     }
 
     #havy {
@@ -68,6 +69,7 @@
         height: auto;
         text-align: center;
         margin-top: 50px;
+        margin-right: 50px;
         aspect-ratio: 16 / 9;
     }
 
@@ -85,6 +87,53 @@
     #노래노 {
         display: none;
     }
+
+    #헌정 {
+        text-align: center;
+        display: none;
+    }
+
+    #닫기 {
+        background-color: crimson;
+        color: rgb(36, 28, 28);
+        cursor: pointer;
+    }
+
+    #선 {
+        background-color: black;
+        height: 3px;
+        margin-bottom: 40px;
+    }
+
+    #월즈 {
+        display: flex;
+        align-items: flex-start;
+        gap: 60px;
+        font-size: 27px;
+
+        color: rgb(39, 37, 37);
+        padding: 20px;
+    }
+
+
+
+    #페일이커 {
+        margin-left: 0;
+        width: 600px;
+
+    }
+
+    #기이록 {
+        white-space: nowrap;
+    }
+
+    #월즈 {
+        display: none;
+    }
+
+    #기록 {
+        cursor: pointer;
+    }
 </style>
 
 <body>
@@ -97,6 +146,9 @@
     <h1 id="노래" onclick="노래보이기()">대상혁헌정노래</h1>
     <div id="노래노">
 
+    </div>
+    <div id="헌정">
+        <h1 id="닫기" onclick="닫기()">닫기</h1>
         <iframe width="560" id="레네다" height="315" src="https://www.youtube.com/embed/hTwBjqnXv2o"
             title="YouTube video player" frameborder="0" allowfullscreen>
 
@@ -115,17 +167,53 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
+
     </div>
 
+    <hr>
+    <div>
+        <h1 id="기록" onclick="기록()">대상혁 월즈기록 보기</h1>
+        <div id="월즈">
+            <div id="와우">
+                <p id="기이록">
+                    <strong>
+                        2013: 우승<br>
+                        2015: 우승<br>
+                        2016: 우승(통합MVP)<br>
+                        2017: 준우승<br>
+                        2022: 준우승<br>
+                        2023: 우승<br>
+                        2024: 우승(MVP)<br>
+                        2025: 월즈우승
+                    </strong>
+
+                </p>
+            </div>
+        </div>
+        <hr>
 
 
 
 
-    <script> document.getElementById("기운").style.fontSize = "30px";
-        function 노래보이기() {
-            document.getElementById("노래노").style.display = "block";
-        }
-    </script>
+
+
+
+        <script> document.getElementById("기운").style.fontSize = "30px";
+            function 노래보이기() {
+                document.getElementById("헌정").style.display = "block";
+            }
+
+            function 닫기() {
+                document.getElementById("헌정").style.display = "none";
+            }
+            function 기록() {
+                document.getElementById("월즈").style.display = "block";
+            }
+            function 기록닫기() {
+                document.getElementById("월즈").style.display = "none";
+            }
+
+        </script>
 
 </body>
 
