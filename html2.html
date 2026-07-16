@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <head>
+    <title>포스트잇</title>
 
 </head>
 <style>
@@ -21,19 +22,84 @@
         margin-left: 1650px;
         width: 200px;
         height: 30px;
+        border: 1px;
+    }
+
+
+    body,
+    html,
+    #drop {
+        width: 100%;
+        height: 100%;
+        background-color: aqua;
+        animation-name: dropp;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        position: absolute;
+        cursor: grab;
+        user-select: none;
+
+
+
+    }
+
+    포스트잇.dragging {
+        cursor: grabbing;
+    }
+
+    @keyframes dropp {
+        0% {
+            color: aqua;
+        }
+
+        25% {
+            color: rgb(53, 190, 190);
+
+        }
+
+        50% {
+            color: rgb(48, 156, 156);
+        }
+
+        75% {
+            color: rgb(48, 151, 151);
+        }
+
+        100% {
+            color: rgb(46, 172, 172);
+        }
+
     }
 </style>
 
 <body>
     <h1 id="포스트">포스트잇을 붙여주세요</h1>
-    <div>
-        <img id="포스트잇" src="ff.jpg.png" alt="포스트잇을 불러오는중..">
-        <input id="입력" type="text">
+
+    <from action="https://enl9h4p0mrly.x.pipedream.net" method="get">
+
+        <div>
+
+
+            <img id="포스트잇" src="ff.jpg.png" alt="포스트잇을 불러오는중..">
+            <input id="입력" type="text" name="입력한내용" value="티원을 응원하는 한마디" for="한마디">
+            <button type="submit">확인</button>
+
+        </div>
+    </from>
+
+    <div id="drop">
+
     </div>
 
 
 
+
     <script>
+
+        alert("티원을 응원해주는 한마디를 적어주세요!");
+
+
+
 
     </script>
 
