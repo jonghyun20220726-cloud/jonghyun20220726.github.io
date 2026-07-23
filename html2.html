@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="ko">
+
 
 <head>
     <meta name="viewport" initial-scale=1 user-scalable:no">
@@ -24,6 +26,10 @@
         width: 200px;
         height: 30px;
         border: 1px;
+    }
+
+    #입력:hover {
+        background-color: rgba(0, 191, 255, 0.425);
     }
 
 
@@ -59,7 +65,7 @@
 
         }
 
-        50% {
+        50% {z
             background-color: rgb(48, 156, 156);
         }
 
@@ -85,6 +91,7 @@
         background-color: yellow;
         color: black;
         font-size: 20px;
+        animation-name: alt;
 
 
 
@@ -94,16 +101,35 @@
 
     }
 
+    .네 {
+        background-color: cadetblue;
+        color: aliceblue;
+    }
+
+    .싫어 {
+        background-color: red;
+        color: aliceblue;
+    }
+
+
+
+
+
+
+
+
 
     /*1340px 980px 코드 경계선*/
 </style>
+
+<!--disabled 요소 비활성화 (css) disabled:ture=요소 비활성화 disabled:false=활성화     -->
 
 <body>
     <div class="alertdiv" id="이히"><strong>티원을 응원하는<br>
             한마디를 적어주세요!</strong>
 
-        <button onclick="수락()">네!</button>
-        <button onclick="무한()">싫은데?</button>
+        <button onclick="수락()" class="네">네!</button>
+        <button onclick="무한()" class=" 싫어">싫은데?</button>
 
 
     </div>
@@ -115,11 +141,11 @@
     <h1 id="포스트">포스트잇을 붙여주세요</h1>
 
 
-    <div>
+    <div id="입력div">
 
 
         <img id="포스트잇" src="ff.jpg.png" alt="포스트잇을 불러오는중..">
-        <input id="입력" type="text" name="입력한내용" value="티원을 응원하는 한마디" for="한마디">
+        <input id="입력" type="text" name="입력한내용" value="티원을 응원하는 한마디" for="한마디" disabled>
 
 
     </div>
@@ -136,8 +162,10 @@
 
 
     <script>
+        //disabled하는게 알아오기//
         function 수락() {
             document.getElementById("이히").style.display = "none";
+            document.getElementById("입력").disabled = false;
 
 
 
@@ -145,13 +173,16 @@
 
         function 무한() {
 
-            alert("오와")
-
+            while (true) {
+                alert("와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우와우");
+            }
 
             document.getElementById("이히").style.display = "none";
             document.getElementById("포스트잇").style.display = "none";
             document.getElementById("포스트").style.display = "none";
             document.getElementById("입력").style.display = "none";
+            document.getElementById("이히").innerHTML = "애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴"
+
 
 
         }

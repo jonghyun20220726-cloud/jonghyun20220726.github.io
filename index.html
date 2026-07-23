@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="ko">
 
 <head>
     <title>대상혁 숭배사이트</title>
@@ -158,6 +159,29 @@
     }
 
 
+    #쉿 {
+        width: 600px;
+        height: auto;
+
+    }
+
+    #와이 {
+        text-align: center;
+        margin-left: 50px;
+        font-size: 70px;
+    }
+
+
+    #디브 {
+        background-color: whitesmoke;
+    }
+
+    #게시판이:hover {
+        color: chocolate;
+
+    }
+
+
 
     /*1340px 980px 코드 경계선*/
 </style>
@@ -175,7 +199,7 @@
     <div id="헌정">
         <h1 id="닫기" onclick="닫기()">닫기</h1>
         <iframe width="560" id="레네다" height="315" src="https://www.youtube.com/embed/hTwBjqnXv2o"
-            title="YouTube video player" frameborder="0" allowfullscreen>
+            title="YouTube video player" frameborder="0" allowfullscreen controls>
 
 
         </iframe>
@@ -184,41 +208,69 @@
             src="https://www.youtube.com/embed/xJqDdgHPj_k?si=o-s2w5bIQNO2dBqH" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen controls>
         </iframe>
 
         <iframe id="havy" width="560" height="315" src="https://www.youtube.com/embed/jzOMcKA3e90?si=n1h15iW-qAfcMFCs"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen controls>
         </iframe>
 
     </div>
 
     <hr>
-    <div>
+    <div id="디브">
         <h1 id="기록" onclick="기록()">대상혁 월즈기록 보기</h1>
         <div id="월즈">
+
             <div id="와우">
                 <p id="기이록">
+                <ul>
                     <strong>
-                        2013: 우승<br>
-                        2015: 우승<br>
-                        2016: 우승(통합MVP)<br>
-                        2017: 준우승<br>
-                        2022: 준우승<br>
-                        2023: 우승<br>
-                        2024: 우승(MVP)<br>
-                        2025: 월즈우승
+
+                        <li> 2013: 우승<br>
+                        </li>
+                        <li>
+                            2015: 우승<br>
+                        </li>
+                        <li>
+                            2016: 우승(통합MVP)<br>
+                        </li>
+                        <li>
+                            2017: 준우승<br>
+                        </li>
+                        <li>
+                            2022: 준우승<br>
+                        </li>
+                        <li>
+                            2023: 우승<br>
+                        </li>
+                        <li>
+                            2024: 우승(MVP)<br>
+                        </li>
+                        <li>
+                            2025: 월즈우승
+                        </li>
+
                     </strong>
-                    <hr>
-                <h1 onclick="기록닫기()" id="닫기버어튼">닫기</h1>
-
+                </ul>
+                <p id="와이"><strong>"13년동안 롤프로, 역시 신"</strong></p>
+                <img src="sheet.jpg" alt="사진불러오는중" id="쉿">
+                <hr>
                 </p>
+
             </div>
+
+
+
+            <h1 onclick="기록닫기()" id="닫기버어튼">닫기</h1>
+
+            </p>
         </div>
-        <hr>
-        <h1 id="게시판이" onclick="window.location.href='html2.html'">대상혁 숭배 게시판가기</h1>
+    </div>
+    <hr>
+    <h1 id="게시판이" onclick="window.location.href='html2.html'">대상혁 숭배 게시판가기</h1>
 
 
 
@@ -227,22 +279,22 @@
 
 
 
-        <script> document.getElementById("기운").style.fontSize = "30px";
-            function 노래보이기() {
-                document.getElementById("헌정").style.display = "block";
-            }
+    <script> document.getElementById("기운").style.fontSize = "30px";
+        function 노래보이기() {
+            document.getElementById("헌정").style.display = "block";
+        }
 
-            function 닫기() {
-                document.getElementById("헌정").style.display = "none";
-            }
-            function 기록() {
-                document.getElementById("월즈").style.display = "block";
-            }
-            function 기록닫기() {
-                document.getElementById("월즈").style.display = "none";
-            }
+        function 닫기() {
+            document.getElementById("헌정").style.display = "none";
+        }
+        function 기록() {
+            document.getElementById("월즈").style.display = "block";
+        }
+        function 기록닫기() {
+            document.getElementById("월즈").style.display = "none";
+        }
 
-        </script>
+    </script>
 
 </body>
 
