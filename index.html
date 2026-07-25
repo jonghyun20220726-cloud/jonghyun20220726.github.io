@@ -181,12 +181,46 @@
 
     }
 
+    #site {
+        background-color:aqua;
+        height:23px;
+        text-align:left;
+        cursor:pointer;
+    }
+
+    .sites {
+        cursor:pointer;
+        display:none;
+        background-color:aquamarine;
+    }
+
+    #clo {
+        background-color:brown;
+        display:none;
+        cursor:pointer;
+    }
+    
+
+   
+
+    
+
 
 
     /*1340px 980px 코드 경계선*/
 </style>
 
 <body>
+    <div id="cist">
+    <div id="site" onclick="열기()"><strond>사이트</strond></div>
+    <div class="sites" id="rold" onclick="window.location.href='gong.html'">공지/규칙</div>
+    <div class="sites" id="nom" onclick="window.location.href='moon.html'">문의/건의</div>
+    <div id="clo" onclick="닫아()"><strond>닫기</strond></div>
+    </div>
+    
+
+
+
     <h1 id="제목"> 오늘도 대상혁 숭배하자 <img src="t1.jpg" alt="사진 불러오는중" class="마크"> </h1>
     <div class="대상혁사진박스"> <img src="faker.jpg" alt="사진 불러오는중" class="대상혁"> <img src="대상혁2.jpg" alt="사진 불러오는중"
             class="대상혁1"> <img src="대상혁4.jpg" alt="사진 불러오는중" class="대상혁2"> </div>
@@ -279,7 +313,8 @@
 
 
 
-    <script> document.getElementById("기운").style.fontSize = "30px";
+    <script> 
+    document.getElementById("기운").style.fontSize = "30px";
         function 노래보이기() {
             document.getElementById("헌정").style.display = "block";
         }
@@ -292,6 +327,21 @@
         }
         function 기록닫기() {
             document.getElementById("월즈").style.display = "none";
+        }
+
+        function 열기(){
+            document.getElementById("rold").style.display = "block";
+            document.getElementById("nom").style.display = "block";
+            document.getElementById("clo").style.display = "block";
+            
+            
+        }
+
+        function 닫아() {
+            document.getElementById("rold").style.display = "none";
+            document.getElementById("nom").style.display = "none";
+            document.getElementById("clo").style.display = "none";
+            
         }
 
     </script>

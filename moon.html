@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    </head>
+    <style>
+         #site {
+        background-color:aqua;
+        height:23px;
+        text-align:left;
+        cursor:pointer;
+    }
+
+    .sites {
+        cursor:pointer;
+        display:none;
+        background-color:aquamarine;
+    }
+
+    #clo {
+        background-color:brown;
+        display:none;
+        cursor:pointer;
+    }
+        </style>
+        <body>
+            <div id="cist">
+    <div id="site" onclick="열기()"><strond>사이트</strond></div>
+    <div class="sites" id="rold" onclick="window.location.href='gong.html'">공지/규칙</div>
+    <div class="sites" id="nom" onclick="window.location.href='moon.html'">문의/건의</div>
+    <div id="clo" onclick="닫아()"><strond>닫기</strond></div>
+    </div>
+            <h1>문의/건의 사항을 선택해주세요</h1>
+
+
+            <script>
+ function 열기(){
+            document.getElementById("rold").style.display = "block";
+            document.getElementById("nom").style.display = "block";
+            document.getElementById("clo").style.display = "block";
+            
+            
+        }
+
+        function 닫아() {
+            document.getElementById("rold").style.display = "none";
+            document.getElementById("nom").style.display = "none";
+            document.getElementById("clo").style.display = "none";
+            
+        }
+
+
+                </script>
+                </body>
+
+
+
+                </html>
