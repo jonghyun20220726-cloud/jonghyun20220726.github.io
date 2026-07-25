@@ -145,6 +145,12 @@
 <!--disabled 요소 비활성화 (css) disabled:ture=요소 비활성화 disabled:false=활성화     -->
 
 <body>
+    <div id="cist">
+    <div id="site" onclick="열기()"><strond>사이트</strond></div>
+    <div class="sites" id="rold" onclick="window.location.href='gong.html'">공지/규칙</div>
+    <div class="sites" id="nom" onclick="window.location.href='moon.html'">문의/건의</div>
+    <div id="clo" onclick="닫아()"><strond>닫기</strond></div>
+    </div>
 
 
     <div class="alertdiv" id="이히"><strong>티원을 응원하는<br>
@@ -208,6 +214,13 @@
             document.getElementById("이히").innerHTML = "애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴"
 
  function 열기(){
+            document.getElementById("rold").style.display = "block";
+            document.getElementById("nom").style.display = "block";
+            document.getElementById("clo").style.display = "block";
+            
+            
+        }
+        function 열기(){
             document.getElementById("rold").style.display = "block";
             document.getElementById("nom").style.display = "block";
             document.getElementById("clo").style.display = "block";
