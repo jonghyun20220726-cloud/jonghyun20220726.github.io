@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>대상혁 숭배사이트</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+<style>
+    #제목 {
+        margin-left: 730px;
+        margin-top: 1px;
+        font-size: 50px;
+        color: rgb(4, 5, 8);
+    }
+
+    .대상혁 {
+        width: 500px;
+        height: auto;
+        object-fit: cover;
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+
+    .대상혁1 {
+        width: 500px;
+        height: auto;
+        object-fit: cover;
+        margin-top: 100px;
+        margin-left: 130px;
+    }
+
+    .대상혁2 {
+        width: 500px;
+        height: auto;
+        object-fit: cover;
+        margin-top: 100px;
+        margin-left: 150px;
+    }
+
+    #기운 {
+        margin-left: 840px;
+    }
+
+    .마크 {
+        width: 150px;
+        height: auto;
+        margin-top: 1px;
+        margin-left: -670px;
+        position: absolute;
+    }
+
+    #레네다 {
+        width: 600px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+
+    }
+
+    #gods은신이노 {
+        width: 600px;
+        height: auto;
+        text-align: center;
+        margin-top: 50px;
+        aspect-ratio: 16 / 9;
+
+    }
+
+    #havy {
+        width: 600px;
+        height: auto;
+        text-align: center;
+        margin-top: 50px;
+        margin-right: 50px;
+        aspect-ratio: 16 / 9;
+    }
+
+
+
+    #노래 {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #노래:hover {
+        color: chocolate;
+    }
+
+    #노래노 {
+        color: rgb(207, 207, 122);
+    }
+
+    #노래노 {
+        display: none;
+    }
+
+    #헌정 {
+        text-align: center;
+        display: none;
+    }
+
+    #닫기 {
+        background-color: crimson;
+        color: rgb(36, 28, 28);
+        cursor: pointer;
+    }
+
+    #선 {
+        background-color: black;
+        height: 3px;
+        margin-bottom: 40px;
+    }
+
+    #월즈 {
+        display: flex;
+        align-items: flex-start;
+        gap: 60px;
+        font-size: 27px;
+
+        color: rgb(39, 37, 37);
+        padding: 20px;
+    }
+
+
+
+    #페일이커 {
+        margin-left: 0;
+        width: 600px;
+
+    }
+
+    #기이록 {
+        white-space: nowrap;
+    }
+
+    #월즈 {
+        display: none;
+    }
+
+    #기록 {
+        cursor: pointer;
+    }
+
+    #기록:hover {
+        color: chocolate;
+    }
+
+    #닫기버어튼 {
+        cursor: pointer;
+
+    }
+
+    #게시판이 {
+        cursor: pointer;
+    }
+
+    #게시판이:hover {
+        color: chocolate;
+    }
+
+
+    #쉿 {
+        width: 600px;
+        height: auto;
+
+    }
+
+    #와이 {
+        text-align: center;
+        margin-left: 50px;
+        font-size: 70px;
+    }
+
+
+    #디브 {
+        background-color: whitesmoke;
+    }
+
+    #게시판이:hover {
+        color: chocolate;
+
+    }
+
+    #site {
+        background-color: aqua;
+        height: 23px;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .sites {
+        cursor: pointer;
+        display: none;
+        background-color: aquamarine;
+    }
+
+    #clo {
+        background-color: brown;
+        display: none;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+    /*1340px 980px 코드 경계선*/
+</style>
+
+<body>
+    <div id="cist">
+        <div id="site" onclick="열기()">
+            <strond>사이트</strond>
+        </div>
+        <div class="sites" id="rold" onclick="window.location.href='goong.html'">공지/규칙</div>
+        <div class="sites" id="nom" onclick="window.location.href='moon1.html'">문의/건의</div>
+        <div id="clo" onclick="닫아()">
+            <strond>닫기</strond>
+        </div>
+    </div>
+
+
+
+
+    <h1 id="제목"> 오늘도 대상혁 숭배하자 <img src="t1.jpg" alt="사진 불러오는중" class="마크"> </h1>
+    <div class="대상혁사진박스"> <img src="faker.jpg" alt="사진 불러오는중" class="대상혁"> <img src="대상혁2.jpg" alt="사진 불러오는중"
+            class="대상혁1"> <img src="대상혁4.jpg" alt="사진 불러오는중" class="대상혁2"> </div>
+    <p id="기운">기운 받으세요</p>
+    <hr>
+    <h1 id="노래" onclick="노래보이기()">대상혁헌정노래</h1>
+    <div id="노래노">
+
+    </div>
+    <div id="헌정">
+        <h1 id="닫기" onclick="닫기()">닫기</h1>
+        <iframe width="560" id="레네다" height="315" src="https://www.youtube.com/embed/hTwBjqnXv2o"
+            title="YouTube video player" frameborder="0" allowfullscreen controls>
+
+
+        </iframe>
+
+        <iframe id="gods은신이노" width="560" height="315"
+            src="https://www.youtube.com/embed/xJqDdgHPj_k?si=o-s2w5bIQNO2dBqH" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen controls>
+        </iframe>
+
+        <iframe id="havy" width="560" height="315" src="https://www.youtube.com/embed/jzOMcKA3e90?si=n1h15iW-qAfcMFCs"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen controls>
+        </iframe>
+
+    </div>
+
+    <hr>
+    <div id="디브">
+        <h1 id="기록" onclick="기록()">대상혁 월즈기록 보기</h1>
+        <div id="월즈">
+
+            <div id="와우">
+                <p id="기이록">
+                <ul>
+                    <strong>
+
+                        <li> 2013: 우승<br>
+                        </li>
+                        <li>
+                            2015: 우승<br>
+                        </li>
+                        <li>
+                            2016: 우승(통합MVP)<br>
+                        </li>
+                        <li>
+                            2017: 준우승<br>
+                        </li>
+                        <li>
+                            2022: 준우승<br>
+                        </li>
+                        <li>
+                            2023: 우승<br>
+                        </li>
+                        <li>
+                            2024: 우승(MVP)<br>
+                        </li>
+                        <li>
+                            2025: 월즈우승
+                        </li>
+
+                    </strong>
+                </ul>
+                <p id="와이"><strong>"13년동안 롤프로, 역시 신"</strong></p>
+                <img src="sheet.jpg" alt="사진불러오는중" id="쉿">
+                <hr>
+                </p>
+
+            </div>
+
+
+
+            <h1 onclick="기록닫기()" id="닫기버어튼">닫기</h1>
+
+            </p>
+        </div>
+    </div>
+    <hr>
+    <h1 id="게시판이" onclick="window.location.href='html2.html'">대상혁 숭배 게시판가기</h1>
+
+
+
+
+
+
+
+
+    <script>
+        document.getElementById("기운").style.fontSize = "30px";
+        function 노래보이기() {
+            document.getElementById("헌정").style.display = "block";
+        }
+
+        function 닫기() {
+            document.getElementById("헌정").style.display = "none";
+        }
+        function 기록() {
+            document.getElementById("월즈").style.display = "block";
+        }
+        function 기록닫기() {
+            document.getElementById("월즈").style.display = "none";
+        }
+
+        function 열기() {
+            document.getElementById("rold").style.display = "block";
+            document.getElementById("nom").style.display = "block";
+            document.getElementById("clo").style.display = "block";
+
+
+        }
+
+        function 닫아() {
+            document.getElementById("rold").style.display = "none";
+            document.getElementById("nom").style.display = "none";
+            document.getElementById("clo").style.display = "none";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
