@@ -105,7 +105,6 @@
 
     #선 {
         background-color: black;
-        height: 3px;
         margin-bottom: 40px;
     }
 
@@ -147,7 +146,7 @@
 
     #닫기버어튼 {
         cursor: pointer;
-        font-size: 3vw;
+        font-size: 2.4vw;
 
     }
 
@@ -242,6 +241,7 @@
         </div>
         <div class="sites" id="rold" onclick="window.location.href='goong.html'">공지/규칙</div>
         <div class="sites" id="nom" onclick="window.location.href='moon1.html'">문의/건의</div>
+        <div class="sites" id="super" onclick="window.location.href='super.html'">도움/응원해주신 분들</div>
     </div>
     </div>
 
@@ -341,6 +341,9 @@
 
 
     <script>
+
+        alert("모바일기기일 경우 사이트가 이상할수도 있습니다, 모바일기기일 경우 <사이트>터치는 꾹 눌러서 해주세요")
+
         document.getElementById("기운").style.fontSize = "30px";
         function 노래보이기() {
             document.getElementById("헌정").style.display = "block";

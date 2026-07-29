@@ -9,9 +9,12 @@
 <style>
     #site {
         background-color: aqua;
-        height: 23px;
+        height: 3vh;
         text-align: left;
         cursor: pointer;
+        animation-name: sit;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
     }
 
     .sites {
@@ -28,122 +31,186 @@
 
     #goong {
         text-align: center;
-        margin-top: 5px;
-        font-size: 40px;
+        margin-top: 0.5%;
+        font-size: 2.54vw;
     }
 
     #rule {
-        font-size: 30px;
+        font-size: 1.4vw;
     }
 
     #룰 {
-        font-size: 20px;
+        font-size: 1vw;
     }
 
     #rr {
-        font-size: 34px;
+        font-size: 1.5vw;
     }
 
     #hh {
-        font-size: 34px;
+        font-size: 1.5vw;
     }
 
     #s {
-        margin-top: 50px;
+        margin-top: 1.5vw;
     }
 
     #h {
-        font-size: 34px;
+        font-size: 1.5vw;
+    }
+
+    #cist:hover .sites {
+        display: block;
+
+    }
+
+    #shet {
+        width: 20vw;
+        height: auto;   
+    }
+
+
+
+    @keyframes sit {
+        0% {
+            background-color: aqua;
+        }
+
+        25% {
+            background-color: rgb(15, 240, 240);
+        }
+
+        50% {
+            background-color: rgb(10, 226, 226);
+        }
+
+        75% {
+            background-color: rgb(13, 211, 211);
+        }
+
+        100% {
+            background-color: rgb(17, 197, 197);
+        }
+    }
+
+    #run {
+        background-color: cornflowerblue;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        cursor: pointer;
+        animation-name: running;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        /*animation-iteration-count:infinite=애니매이션 무한으로*/
+
+    }
+
+    @keyframes running {
+        0% {
+            background-color: cornflowerblue;
+        }
+
+        25% {
+            background-color: rgb(103, 149, 235);
+        }
+
+        50% {
+            background-color: rgb(106, 149, 228);
+        }
+
+        75% {
+            background-color: rgb(109, 148, 221);
+        }
+
+        100% {
+            background-color: rgb(129, 156, 207);
+        }
     }
 </style>
 
 <body>
     <div id="cist">
-        <div id="site" onclick="열기()">
-            <strond>사이트</strond>
+        <div id="site">
+            <strong>사이트</strong>
         </div>
         <div class="sites" id="rold" onclick="window.location.href='goong.html'">공지/규칙</div>
         <div class="sites" id="nom" onclick="window.location.href='moon1.html'">문의/건의</div>
-        <div id="clo" onclick="닫아()">
-            <strond>닫기</strond>
-        </div>
     </div>
+    </div>
+    <div id="run" onclick="window.location.href='index1.html'">대상혁 숭배사이트로<br> 돌아가기</div>
 
     <div id="gonge">
         <h1 id="goong"><strong>공지</strong></h1>
         <hr>
         <div id="gege">
-            <h2>사이트 사용가능 기기 안내</h2>
-            <h3>컴퓨터(노트북안됨), 나중에 더 업데이트할 예정!</h3>
+            <h2>
+                <strong>사이트 사용가능 기기 안내</strong>
+            </h2>
+            <h3>컴퓨터(노트북안됨), 나중에 더 업데이트할 예정!
+                <br>나중에 반응형으로 바꿀거임
+            </h3>
+            <hr>
+
         </div>
     </div>
-    <hr>
-    < <div>
+
+
+    <div>
         <h1 id="rule">규칙<br>
             <필수>
         </h1>
-        </div>
+    </div>
 
-        <div id="룰">
-
-            <ul>
-                <li>
-
-                    <h2 id="rr">선수들을 비방하지 않는다<br>(비방시 제제조치)</h2>
-        </div>
-        <ul>
-            <li>
-                <h2 id="hh">욕설을 하지 않는다</h2>
-            </li>
-        </ul>
+    <div id="룰">
 
         <ul>
             <li>
-                <h2 id="h">개인정보를 유포, 유출하지 않는다</h2>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <h2 id="s">끝!!</h2>
-            </li>
-        </ul>
 
-
-
-
-
-
-
-
+                <h2 id="rr">선수들을 비방하지 않는다<br>(비방시 제제조치)</h2>
+    </div>
+    <ul>
+        <li>
+            <h2 id="hh">욕설을 하지 않는다</h2>
         </li>
-        </ul>
-        </div>
-        <hr>
+    </ul>
+
+    <ul>
+        <li>
+            <h2 id="h">개인정보를 유포, 유출하지 않는다</h2>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <h2 id="s">끝!!(상식적인거는 지켜주세요)</h2>
+        </li>
+    </ul>
+
+    <img src="faker.jpg" alt="사진 불러오는중" id="shet">
 
 
 
 
 
 
-        <script>
-            function 열기() {
-                document.getElementById("rold").style.display = "block";
-                document.getElementById("nom").style.display = "block";
-                document.getElementById("clo").style.display = "block";
 
 
-            }
-
-            function 닫아() {
-                document.getElementById("rold").style.display = "none";
-                document.getElementById("nom").style.display = "none";
-                document.getElementById("clo").style.display = "none";
-
-            }
+    </li>
+    </ul>
+    </div>
+    <hr>
 
 
 
-        </script>
+
+
+
+    <script>
+
+
+
+
+    </script>
 
 
 

@@ -8,15 +8,16 @@
 
 </head>
 <style>
+    /*이거 뷰포트 적용하기*/
     #포스트 {
         text-align: center;
-        margin-top: 50px;
+        margin-top: 5%;
     }
 
     #포스트잇 {
-        margin-top: 100px;
-        margin-left: 1600px;
-        width: 300px;
+        margin-top: 50%;
+        margin-left: 5%;
+        width: 20vw;
         height: auto;
     }
 
@@ -29,7 +30,7 @@
     }
 
     #입력:hover {
-        background-color: rgba(0, 191, 255, 0.425);
+        background-color: beige;
     }
 
 
@@ -48,8 +49,11 @@
 
     }
 
-    포스트잇.dragging {
-        cursor: grabbing;
+    #mes {
+        margin-top: 10%;
+        margin-left: 80%;
+        width: 15vw;
+        height: 3vw;
     }
 
     /*
@@ -83,14 +87,14 @@
         */
 
     .alertdiv {
-        width: 350px;
-        height: 100px;
-        margin-top: 2px;
-        margin-left: 780px;
+        width: 18vw;
+        height: 10vh;
+        margin-top: 0.3%;
+        margin-left: 40%;
         text-align: center;
         background-color: yellow;
         color: black;
-        font-size: 20px;
+        font-size: 1vw;
         animation-name: alt;
 
 
@@ -104,18 +108,18 @@
     .네 {
         background-color: cadetblue;
         color: aliceblue;
-        margin-top: 20px;
+        margin-top: 2%;
     }
 
     .싫어 {
         background-color: red;
         color: aliceblue;
-        margin-top: 20px;
+        margin-top: 2%;
     }
 
     #site {
-        background-color: aqua;
-        height: 23px;
+        background-color: orange;
+        height: 2%;
         text-align: left;
         cursor: pointer;
     }
@@ -123,13 +127,51 @@
     .sites {
         cursor: pointer;
         display: none;
-        background-color: aquamarine;
+        background-color: blanchedalmond;
     }
 
-    #clo {
-        background-color: brown;
-        display: none;
+    #cist:hover .sites {
+        display: block;
+
+    }
+
+    #run {
+        background-color: cornflowerblue;
+        width: 10vw;
+        height: 5vh;
+        text-align: center;
         cursor: pointer;
+        animation-name: running;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        /*animation-iteration-count=애니매이션 무한으로*/
+
+    }
+
+    @keyframes running {
+        0% {
+            background-color: cornflowerblue;
+        }
+
+        25% {
+            background-color: rgb(103, 149, 235);
+        }
+
+        50% {
+            background-color: rgb(106, 149, 228);
+        }
+
+        75% {
+            background-color: rgb(109, 148, 221);
+        }
+
+        100% {
+            background-color: rgb(129, 156, 207);
+        }
+    }
+
+    #hear {
+        margin-left: 80%;
     }
 
 
@@ -146,16 +188,16 @@
 <!--disabled 요소 비활성화 (css) disabled:ture=요소 비활성화 disabled:false=활성화     -->
 
 <body>
+
     <div id="cist">
-        <div id="site" onclick="열기()">
+        <div id="site">
             <strond>사이트</strond>
         </div>
         <div class="sites" id="rold" onclick="window.location.href='goong.html'">공지/규칙</div>
         <div class="sites" id="nom" onclick="window.location.href='moon1.html'">문의/건의</div>
-        <div id="clo" onclick="닫아()">
-            <strond>닫기</strond>
-        </div>
     </div>
+    </div>
+    <div id="run" onclick="window.location.href='index1.html'">대상혁 숭배사이트로<br> 돌아가기</div>
 
 
     <div class="alertdiv" id="이히"><strong>티원을 응원하는<br>
@@ -170,17 +212,22 @@
 
 
 
-
-    <h1 id="포스트">포스트잇을 붙여주세요</h1>
-
-
-    <div id="입력div">
+    <div>
+        <h1 id="포스트">티원을 응원하는 한마디</h1>
 
 
-        <img id="포스트잇" src="ff.jpg.png" alt="포스트잇을 불러오는중..">
-        <input id="입력" type="text" name="입력한내용" value="티원을 응원하는 한마디" for="한마디" disabled>
+        <div id="입력div">
+
+            <div>
+                <!--여기 form하는법 알아오기-->
+                <form action="#">
+                    <input type="text" name="입력한-내용" for="내용" id="mes" disabled>
+                </form>
+                <p id="hear"><strong>여기에 써주세요 (한줄로만)</strong></p>
+            </div>
 
 
+        </div>
     </div>
 
 
@@ -200,7 +247,7 @@
         //disabled하는게 알아오기//
         function 수락() {
             document.getElementById("이히").style.display = "none";
-            document.getElementById("입력").disabled = false;
+            document.getElementById("mes").disabled = false;
 
 
 
@@ -215,28 +262,13 @@
             document.getElementById("이히").style.display = "none";
             document.getElementById("포스트잇").style.display = "none";
             document.getElementById("포스트").style.display = "none";
-            document.getElementById("입력").style.display = "none";
-            document.getElementById("이히").innerHTML = "애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴애휴"
+            document.getElementById("mes").style.display = "none";
 
             function 열기() {
                 document.getElementById("rold").style.display = "block";
                 document.getElementById("nom").style.display = "block";
                 document.getElementById("clo").style.display = "block";
 
-
-            }
-            function 열기() {
-                document.getElementById("rold").style.display = "block";
-                document.getElementById("nom").style.display = "block";
-                document.getElementById("clo").style.display = "block";
-
-
-            }
-
-            function 닫아() {
-                document.getElementById("rold").style.display = "none";
-                document.getElementById("nom").style.display = "none";
-                document.getElementById("clo").style.display = "none";
 
             }
 
