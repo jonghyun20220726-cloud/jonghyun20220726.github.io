@@ -6,9 +6,12 @@
 <style>
     #site {
         background-color: aqua;
-        height: 23px;
+        height: 3vh;
         text-align: left;
         cursor: pointer;
+        animation-name: sit;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
     }
 
     .sites {
@@ -25,51 +28,189 @@
 
     #moni {
         text-align: center;
-        margin-top: 5px;
+        margin-top: 0.7%;
+    }
+
+    #cist:hover .sites {
+        display: block;
+
+    }
+
+    @keyframes sit {
+        0% {
+            background-color: aqua;
+        }
+
+        25% {
+            background-color: rgb(15, 240, 240);
+        }
+
+        50% {
+            background-color: rgb(10, 226, 226);
+        }
+
+        75% {
+            background-color: rgb(13, 211, 211);
+        }
+
+        100% {
+            background-color: rgb(17, 197, 197);
+        }
+    }
+
+    #in {
+        margin-top: 100px;
+        margin-left: 900px;
+        width: 200px;
+
+    }
+
+    #site {
+        background-color: aqua;
+        height: 3vh;
+        text-align: left;
+        cursor: pointer;
+        animation-name: sit;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes sit {
+        0% {
+            background-color: aqua;
+        }
+
+        25% {
+            background-color: rgb(15, 240, 240);
+        }
+
+        50% {
+            background-color: rgb(10, 226, 226);
+        }
+
+        75% {
+            background-color: rgb(13, 211, 211);
+        }
+
+        100% {
+            background-color: rgb(17, 197, 197);
+        }
+    }
+
+    #run {
+        background-color: cornflowerblue;
+        width: 10vw;
+        height: 3vw;
+        text-align: center;
+        cursor: pointer;
+        animation-name: running;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        /*animation-iteration-count=애니매이션 무한으로*/
+
+    }
+
+    @keyframes running {
+        0% {
+            background-color: cornflowerblue;
+        }
+
+        25% {
+            background-color: rgb(103, 149, 235);
+        }
+
+        50% {
+            background-color: rgb(106, 149, 228);
+        }
+
+        75% {
+            background-color: rgb(109, 148, 221);
+        }
+
+        100% {
+            background-color: rgb(129, 156, 207);
+        }
+    }
+
+    #opt {
+        width: 20vw;
+        height: 40vh;
+        margin-top: 5%;
+        margin-left: 40%;
+
+
+        background-color: aquamarine;
+    }
+
+    #op {
+        text-align: center;
+        margin-left: -3.5%;
+    }
+
+    #area {
+        margin-top: 40%;
+        margin-left: 27%;
+    }
+
+    #pp {
+        margin-bottom: 10%;
     }
 </style>
 
 <body>
+
     <div id="cist">
-        <div id="site" onclick="열기()">
-            <strond>사이트</strond>
+        <div id="site">
+            <strong>사이트</strong>
         </div>
         <div class="sites" id="rold" onclick="window.location.href='goong.html'">공지/규칙</div>
         <div class="sites" id="nom" onclick="window.location.href='moon1.html'">문의/건의</div>
-        <div id="clo" onclick="닫아()">
-            <strond>닫기</strond>
-        </div>
     </div>
+    <div id="run" onclick="window.location.href='index1.html'">대상혁 숭배사이트로<br> 돌아가기</div>
 
     <h1 id="moni">문의/건의 사항을 선택해주세요</h1>
     <hr>
+    <!-- 여기 하는법 알아오기
+    <div id="iin">
+        <div id="in">
+            <fieldset>
+                <legend>선택<legend>
+                        <select>
+                            <optgroup>
+                                <option value="문의">문의</option>
+                                <option value="건의">건의</option>
+                            </optgroup>
+                            <input type="text">
+            </fieldset>
+            </select>
 
-    <div id="in">
-        <select>
-            <optgroup label="선택">
-                <option value="문의사항">문의사항</option>
-                <option value="건의사항">건의사항</option>
-            </optgroup>
-        </select>
 
+        </div>
+    </div>
+    -->
+
+    <div id="opt">
+        <div id="op">
+            <select>    
+
+                <optgroup>
+                    <option value="문의">문의</option>
+                    <option value="건의">건의</option>
+                    <option value="점메추">점메추</option>
+                </optgroup>
+            </select>
+        </div>
+        <div id="area">
+            <textarea type="text" value="입력해주세요">입력해주세요</textarea>
+            <p id="pp"><strong>욕설/비방은 자제해주세요</strong></p>
+        </div>
     </div>
 
 
+
+
+
     <script>
-        function 열기() {
-            document.getElementById("rold").style.display = "block";
-            document.getElementById("nom").style.display = "block";
-            document.getElementById("clo").style.display = "block";
-
-
-        }
-
-        function 닫아() {
-            document.getElementById("rold").style.display = "none";
-            document.getElementById("nom").style.display = "none";
-            document.getElementById("clo").style.display = "none";
-
-        }
 
 
     </script>
